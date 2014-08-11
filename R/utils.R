@@ -183,6 +183,7 @@ get.location<-function(object,type=c("bic","aic")){
 #' for 2932 time points.
 #'
 #' @format A data frame with 2932 rows and 3 variables
+#' @import
 #' 
 #' The variables are as follows:
 #' \itemize{
