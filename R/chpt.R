@@ -15,7 +15,7 @@
 #' @examples
 #' \dontrun{
 #' w<-c(seq(10,90,by=10),seq(100,1000,by=25))           
-# y<-RNA[,1]
+#' y<-RNA[,1]
 #' times<-RNA[,2]   
 #' chpt1<-chpt(y,times,w)
 #' plot.step(chpt1)
@@ -42,13 +42,13 @@ ChPt<-function(...){
 
 chpt.default<-function(y,times,w,cutoff=0.9,cor=TRUE){
   # cutoff is the upper percentile for choosing plausible step locations i.e. only top 10% highest values are choosen by default
-  # chpt0 contains the output from the command get.zstat() which contains the zstats computed for various windows
   #-----------------------------------------------------------------------------------------------------------------------------
-  # extract values from chpt0
+  # chpt0 computes the zstat that is uses to find the plausible set of change points - stored in mzstat
   chpt0<-get.zstat(y,times,w)
   mzstat<-chpt0$mzstat
   #-----------------------------------------------------------------------------------------------------------------------------
   # Getting the initial set of step locations
+  # peaks1 are the initial set of step locations
   MU<-apply(mzstat,1,mean)
   snr<-quantile(MU,cutoff)
   if(length(y)>=1000){
@@ -127,7 +127,7 @@ chpt.default<-function(y,times,w,cutoff=0.9,cor=TRUE){
       lm2<-sp.lm(xmat,y,xmat,y)                         # simple linear regression
       RESULTS[[count]]<-lm2
       pval<-lm2$pval[-1]                              # Always ignore the intercept 
-      id<-rev(order(pval))[1]                         # is is the column to be removed
+      id<-rev(order(pval))[1]                         # is the column to be removed
       id<-id+1
       if(ncol(fx)!=1){
         # here we remove the corresponding columns in all the relevenat matrices

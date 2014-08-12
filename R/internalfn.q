@@ -101,6 +101,7 @@ sp.lm<-function(x,y,fx,fy){
 #' 
 #' Internal function. Not to be called by the user
 robust.ar<-function(x,p){
+  # fit robust ar to the residuals
   lma<-rlm(x~1)
   w<-lma$w
   mu<-lma$coef
