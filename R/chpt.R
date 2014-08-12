@@ -14,6 +14,7 @@
 #' }
 #' @examples
 #' \dontrun{
+#' 
 #' w<-c(seq(10,90,by=10),seq(100,1000,by=25))           
 #' y<-RNA[,1]
 #' times<-RNA[,2]   
