@@ -17,6 +17,7 @@
 #' 
 #' w<-c(seq(10,90,by=10),seq(100,1000,by=25))           
 #' y<-RNA[,1]
+#' y<-RNA[,1]
 #' times<-RNA[,2]   
 #' chpt1<-chpt(y,times,w)
 #' plot.step(chpt1)
