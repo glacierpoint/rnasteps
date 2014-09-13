@@ -10,3 +10,7 @@ Load the package into R as follows:
 library(devtools)
 
 install_github("rnasteps","glacierpoint")
+
+Reference:
+
+Arunajadai SG, Cheng W (2013) Step Detection in Single-Molecule Real Time Trajectories Embedded in Correlated Noise. PLoS ONE 8(3): e59279. doi:10.1371/journal.pone.0059279
