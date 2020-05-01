@@ -10,7 +10,9 @@ Load the package into R as follows:
 library(devtools)
 
 install_github("glacierpoint/rnasteps")
+
 library(rnasteps)
+
 library(ifultools)
 
 Reference:
